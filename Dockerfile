@@ -1,4 +1,5 @@
-FROM dashai/centos:lastest
+FROM registry.access.redhat.com/rhel7.4
+
 
 RUN "yum install -y wget https://dl.influxdata.com/telegraf/releases/telegraf-1.4.2-1.x86_64.rpm"
 
