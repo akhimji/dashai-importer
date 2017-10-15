@@ -14,4 +14,4 @@ RUN rm -f /tmp/telegraf-1.4.2-1.x86_64.rpm
 
 #COPY entrypoint.sh /entrypoint.sh
 #ENTRYPOINT ["/entrypoint.sh"]
-CMD ["tail -f /dell/null"]
+CMD ["tail -f /dev/null"]
