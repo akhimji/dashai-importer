@@ -1,5 +1,4 @@
-FROM registry.access.redhat.com/rhel7.4
-
+FROM centos:latest
 
 RUN INSTALL_PKGS="wget iputils net-tools" && \
     yum install -y $INSTALL_PKGS && \
@@ -14,4 +13,4 @@ RUN rm -f /tmp/telegraf-1.4.2-1.x86_64.rpm
 
 #COPY entrypoint.sh /entrypoint.sh
 #ENTRYPOINT ["/entrypoint.sh"]
-CMD ["sleep 99999999"]
+CMD ["/usr/bin/telegraf", "--config", "/etc/telegraf/telegraf.conf"]
