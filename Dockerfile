@@ -11,7 +11,7 @@ RUN wget https://dl.influxdata.com/telegraf/releases/telegraf-1.4.2-1.x86_64.rpm
 RUN yum localinstall -y /tmp/telegraf-1.4.2-1.x86_64.rpm
 RUN rm -f /tmp/telegraf-1.4.2-1.x86_64.rpm
 
-EXPOSE 8125/udp 8092/udp 8094
+
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["telegraf"]
